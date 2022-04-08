@@ -4,13 +4,13 @@ const { Schema } = mongoose;
 //ESQUEMA DE BASE DE DATOS PRODUCTOS
 const ProductSchema = new Schema({
     code: { type: String, required: true, maxlength: [13], unique: [true, "Éste código ya se encuentra registrado"] },
-    name: { type: String, required: false },
-    marca: { type: String, required: false },
-    category: { type: String, required: false },
-    description: { type: String, required: false },
-    stock: { type: Number, required: false },
-    precio: { type: Number, required: false },
-    status: { type: String, required: false },
+    name: { type: String, required: false, default: "default" },
+    marca: { type: String, required: false, default: "default" },
+    category: { type: String, required: false, default: "default" },
+    description: { type: String, required: false, default: "default" },
+    stock: { type: Number, required: false, default: "default" },
+    precio: { type: Number, required: false, default: "default" },
+    status: { type: String, required: false, default: "default" },
 });
 
 //EXPORTACION DEL MODULO
